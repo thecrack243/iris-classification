@@ -5,6 +5,7 @@ import plotly.express as px
 import joblib
 import plotly.figure_factory as ff
 import io
+import os
 from datetime import datetime
 
 from sklearn.model_selection import train_test_split
@@ -36,7 +37,10 @@ st.set_page_config(page_title="Iris ML App", layout="wide")
 # LOAD DATA (CACHED)
 @st.cache_data
 def load_data():
-    df = pd.read_csv("../data/iris_dataset.csv")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_PATH = os.path.join(BASE_DIR, "..", "data", "iris_dataset.csv")
+
+    df = pd.read_csv(DATA_PATH)
     if "Id" in df.columns:
         df = df.drop(columns=["Id"])
     return df
