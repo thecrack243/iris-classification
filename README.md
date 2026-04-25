@@ -188,6 +188,8 @@ Emmanuel Ilunga
 Machine Learning Project — 2026  
 
 
+## Live Demo
+https://iris-classification-rf.streamlit.app
 
 ## License
 

@@ -31,7 +31,10 @@ from utils import predict_flower, predict_confidence
 
 
 # CONFIG
-st.set_page_config(page_title="Iris ML App", layout="wide")
+st.set_page_config(
+    page_title="Iris Flower Classification - Machine Learning App",
+    page_icon="🌸",
+)
 
 
 # LOAD DATA (CACHED)
