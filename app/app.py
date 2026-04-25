@@ -34,6 +34,7 @@ from utils import predict_flower, predict_confidence
 st.set_page_config(
     page_title="Iris Flower Classification - Machine Learning App",
     page_icon="🌸",
+    layout="wide"
 )
 
 
