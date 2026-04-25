@@ -1,11 +1,14 @@
 import joblib
 import pandas as pd
 from sklearn.metrics import confusion_matrix, classification_report
+import os
 
-# Charger le modèle
-model = joblib.load("iris_model.pkl")
+# Load model using correct relative path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "iris_model.pkl")
+model = joblib.load(MODEL_PATH)
 
-# Fonction de prédiction
+# Prediction function
 def predict_flower(sepal_length, sepal_width, petal_length, petal_width):
     features = pd.DataFrame([[sepal_length, sepal_width, petal_length, petal_width]],
                             columns=["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"])
@@ -20,7 +23,7 @@ def predict_flower(sepal_length, sepal_width, petal_length, petal_width):
 
     return mapping[prediction]
 
-# Fonction pour la prédiction et le calcul de la confiance
+# Function to compute prediction probability (confidence)
 def predict_confidence(sepal_length, sepal_width, petal_length, petal_width):
     features = pd.DataFrame([[sepal_length, sepal_width, petal_length, petal_width]],
                             columns=["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"])
@@ -30,12 +33,12 @@ def predict_confidence(sepal_length, sepal_width, petal_length, petal_width):
 
     return confidence * 100
 
-# Fonction pour calculer la matrice de confusion et le rapport de classification
+# Function to compute confusion matrix and classification report
 def confusion_matrix_and_report(model, X_test, y_test):
-    # Prédictions
+    # Predictions
     y_pred = model.predict(X_test)
     
-    # Matrice de confusion et rapport de classification
+    # Confusion matrix and classification report
     cm = confusion_matrix(y_test, y_pred)
     cr = classification_report(y_test, y_pred, target_names=["Iris-setosa", "Iris-versicolor", "Iris-virginica"])
     
