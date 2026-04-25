@@ -72,7 +72,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 # MODEL LOAD
 @st.cache_resource
 def load_model():
-    return joblib.load("iris_model.pkl")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base_dir, "iris_model.pkl")
+    return joblib.load(model_path)
 
 
 model = load_model()
