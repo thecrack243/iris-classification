@@ -1,10 +1,11 @@
-numpy
+streamlit
 pandas
+numpy
 matplotlib
 seaborn
 scikit-learn
+plotly
+joblib
+reportlab
 jupyter
 ipykernel
-streamlit
-reportlab
-plotly
