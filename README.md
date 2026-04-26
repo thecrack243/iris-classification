@@ -209,7 +209,7 @@ The model achieves strong performance on the dataset:
 
 ## Future Improvements
 
-- [ ] Implement SVM model and compare performance with Random Forest → #1
+- [ ] Implement SVM model → [Issue #1](https://github.com/thecrack243/iris-classification/issues/1)
 - [ ] Implement KNN classifier and evaluate accuracy
 - [ ] Add model comparison table (Accuracy, Precision, Recall, F1-score)
 - [ ] Apply hyperparameter tuning
