@@ -209,7 +209,7 @@ The model achieves strong performance on the dataset:
 
 ## Future Improvements
 
-- [ ] Implement SVM model and compare performance with Random Forest
+- [ ] Implement SVM model and compare performance with Random Forest → #1
 - [ ] Implement KNN classifier and evaluate accuracy
 - [ ] Add model comparison table (Accuracy, Precision, Recall, F1-score)
 - [ ] Apply hyperparameter tuning
