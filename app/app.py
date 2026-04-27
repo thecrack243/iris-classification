@@ -548,4 +548,4 @@ with tab6:
 
 # FOOTER
 st.divider()
-st.markdown("Machine Learning Project — 2026 By Emmanuel Ilugna")
+st.markdown("Copyright (c) 2026 Emmanuel Ilunga - Machine Learning Project")
