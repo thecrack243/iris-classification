@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://thumbs.dreamstime.com/b/flower-garden-iris-clipped-to-banner-size-220802263.jpg" alt="Iris Classification Banner"/>
+</p>
+
 # Iris Flower Classification
 
 A machine learning project that classifies iris flowers into three species based on their physical measurements.
